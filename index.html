@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body id="body" class="h-screen w-screen overflow-hidden  box-border bg-white text-black">
+    <h1 class="text-3xl mt-3
+  text-blue-500 text-center">Random Password</h1>
+
+    <div class="absolute top-4 right-10"><svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            width="32" height="32" color="currentColor" fill="whitesmoke" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21.5 14.0784C20.3003 14.7189 18.9301 15.0821 17.4751 15.0821C12.7491 15.0821 8.91792 11.2509 8.91792 6.52485C8.91792 5.06986 9.28105 3.69968 9.92163 2.5C5.66765 3.49698 2.5 7.31513 2.5 11.8731C2.5 17.1899 6.8101 21.5 12.1269 21.5C16.6849 21.5 20.503 18.3324 21.5 14.0784Z">
+            </path>
+        </svg>
+        <svg class="hidden sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"
+            color="#f8ff88" fill="orange" stroke="#f6ff00" stroke-width="1.5">
+            <path
+                d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z">
+            </path>
+            <path
+                d="M12 2V3.5M12 20.5V22M19.0708 19.0713L18.0101 18.0106M5.98926 5.98926L4.9286 4.9286M22 12H20.5M3.5 12H2M19.0713 4.92871L18.0106 5.98937M5.98975 18.0107L4.92909 19.0714"
+                stroke-linecap="round"></path>
+        </svg>
+    </div>
+
+    <div
+        class="rounded-4xl bg-cyan-200 flex relative flex-wrap items-center justify-center h-[30vh] w-[50vw] mt-4 ml-auto mr-auto">
+
+        <input id="inpa" class="bg-red-200 h-[7vh] w-[40vw] ml-5 mr-5 pl-4 rounded-2xl
+     hover:rounded-4xl" type="text" value="" placeholder="Generate a Random Password" readonly>
+        <p id="msg"></p>
+        <div class="cursor-pointer absolute top-9 right-20 ">
+            <svg class="copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="none"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M7.5 14.5C7.5 11.2002 7.5 9.55025 8.52513 8.52513C9.55025 7.5 11.2002 7.5 14.5 7.5C17.7998 7.5 19.4497 7.5 20.4749 8.52513C21.5 9.55025 21.5 11.2002 21.5 14.5C21.5 17.7998 21.5 19.4497 20.4749 20.4749C19.4497 21.5 17.7998 21.5 14.5 21.5C11.2002 21.5 9.55025 21.5 8.52513 20.4749C7.5 19.4497 7.5 17.7998 7.5 14.5Z">
+                </path>
+                <path
+                    d="M7.5 16.5C6.10355 16.5 5.40533 16.5 4.84402 16.3036C3.83866 15.9518 3.0482 15.1613 2.69641 14.156C2.5 13.5947 2.5 12.8964 2.5 11.5V9.5C2.5 6.20017 2.5 4.55025 3.52513 3.52513C4.55025 2.5 6.20017 2.5 9.5 2.5H11.5C12.8964 2.5 13.5947 2.5 14.156 2.69641C15.1613 3.0482 15.9518 3.83866 16.3036 4.84402C16.5 5.40533 16.5 6.10355 16.5 7.5">
+                </path>
+            </svg>
+
+
+
+
+
+            <svg class="done hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M11 10.6667C11 10.6667 11.75 10.6667 12.5 12C12.5 12 14.8824 8.66667 17 8"></path>
+                <path
+                    d="M7 11V9C7 5.70017 7 4.05025 8.02513 3.02513C9.05025 2 10.7002 2 14 2C17.2998 2 18.9497 2 19.9749 3.02513C21 4.05025 21 5.70017 21 9V11C21 14.2998 21 15.9497 19.9749 16.9749C18.9497 18 17.2998 18 14 18C10.7002 18 9.05025 18 8.02513 16.9749C7 15.9497 7 14.2998 7 11Z">
+                </path>
+                <path d="M3 6V15C3 18.2998 3 19.9497 4.02513 20.9749C5.05025 22 6.70017 22 10 22H17"></path>
+            </svg>
+        </div>
+
+        <button id="btn" class=" flex justify-center items-center cursor-pointer
+    h-[7vh] w-[20vw] bg-fuchsia-500 rounded-3xl hover:scale-90">Generate Password</button>
+    </div>
+
+
+
+
+    <div class="flex flex-wrap bg-lime-300 min-h-[30vh] w-[50vw] mt-[25vh] rounded-4xl m-auto  items-center justify-center relative ">
+
+        <input id="inpb" class="bg-orange-400  h-[7vh] w-[40vw] ml-5 mr-5 pl-5 rounded-2xl
+     hover:rounded-4xl" type="password" placeholder="Show and Hide Password" value="">
+
+        <div id="see" class="h-min w-min absolute right-[6vw] top-2 cursor-pointer"><svg class="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor"
+                fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke-linecap="round"></path>
+                <path
+                    d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z">
+                </path>
+                <path
+                    d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z">
+                </path>
+            </svg>
+
+        </div>
+
+
+        <div id="hide" class="absolute right-[6vw] top-2 hidden cursor-pointer ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                    d="M6.43385 6.51953C4.22009 7.89049 2.93281 9.86457 2.31858 11.0339C2.10621 11.4382 2.00003 11.6403 2 12.0082C1.99997 12.3761 2.10584 12.5777 2.3176 12.981C3.32862 14.9066 6.16702 19.0195 11.9669 19.0195C14.2454 19.0195 16.0669 18.3848 17.5 17.4972"
+                    stroke-linejoin="round"></path>
+                <path
+                    d="M9.87868 9.87868C9.33579 10.4216 9 11.1716 9 12C9 13.6569 10.3431 15 12 15C12.8284 15 13.5784 14.6642 14.1213 14.1213">
+                </path>
+                <path d="M2 2L22 22" stroke-linejoin="round"></path>
+                <path
+                    d="M10 5.14847C10.5934 5.05255 11.224 5 11.8936 5C17.7747 5 20.6528 9.05385 21.6779 10.9517C21.8927 11.3492 22 11.548 22 11.9106C22 12.2733 21.8921 12.4727 21.6765 12.8717C21.3678 13.4428 20.8916 14.2085 20.2167 15"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </div>
+
+        <div class="flex flex-col flex-wrap justify-center items-center">
+        <p id="strength"></p> </div>
+    </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
